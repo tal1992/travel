@@ -5,8 +5,8 @@ export const MainHero = () => {
     <div className="py-20" style={{ backgroundColor: "#FFF7F5" }}>
       <div className="flex justify-between items-center px-5 md:px-20">
         <div className="w-full lg:w-2/5">
-          <h1 className="text-6xl font-bold">
-            Let’s make your best trip ever!
+          <h1 className="text-4xl font-bold">
+           London is calling !
           </h1>
           <div className="bg-white shadow-sm p-5 mt-5 rounded-lg">
             <input
@@ -32,7 +32,7 @@ export const MainHero = () => {
         </div>
         <div className="w-2/5 hidden lg:block">
           <img
-            src="/assets/image-header.png"
+            src="/assets/bigbenheader.jpg"
             alt=""
             className="block w-full right-0 object-cover"
             style={{ borderRadius: "0px 0px 0px 7rem" }}

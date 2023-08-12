@@ -7,24 +7,16 @@ export const Footer = () => {
           <h4 className="text-lg font-semibold text-white">MENU</h4>
           <ul className="mt-2 text-white text-sm">
             <li className="py-3">
-              <Link href="#">
-                <a>Home</a>
-              </Link>
+              <Link href="#">Home</Link>
             </li>
             <li className="py-3">
-              <Link href="#">
-                <a>About Us</a>
-              </Link>
+              <Link href="#">About Us</Link>
             </li>
             <li className="py-3">
-              <Link href="#">
-                <a>Contact</a>
-              </Link>
+              <Link href="#">Contact</Link>
             </li>
             <li className="py-3">
-              <Link href="#">
-                <a>FAQ</a>
-              </Link>
+              <Link href="#">FAQ</Link>
             </li>
           </ul>
         </div>
@@ -32,14 +24,10 @@ export const Footer = () => {
           <h4 className="text-lg font-semibold text-white">LEGAL</h4>
           <ul className="mt-2 text-white text-sm">
             <li className="py-3">
-              <Link href="#">
-                <a>Term Of Service</a>
-              </Link>
+              <Link href="#">Term Of Service</Link>
             </li>
             <li className="py-3">
-              <Link href="#">
-                <a>Privacy Policy</a>
-              </Link>
+              <Link href="#">Privacy Policy</Link>
             </li>
           </ul>
         </div>
@@ -48,41 +36,35 @@ export const Footer = () => {
           <ul className="mt-2 text-white text-sm flex">
             <li className="mr-3">
               <Link href="#">
-                <a>
-                  <img
-                    src="/assets/sosmed/facebook.svg"
-                    className="h-5 w-5"
-                    alt=""
-                  />
-                </a>
+                <img
+                  src="/assets/sosmed/facebook.svg"
+                  className="h-5 w-5"
+                  alt=""
+                />
               </Link>
             </li>
             <li className="mr-3">
               <Link href="#">
-                <a>
-                  <img
-                    src="/assets/sosmed/instagram.svg"
-                    className="h-6 w-6"
-                    alt=""
-                  />
-                </a>
+                <img
+                  src="/assets/sosmed/instagram.svg"
+                  className="h-6 w-6"
+                  alt=""
+                />
               </Link>
             </li>
             <li className="mr-3">
               <Link href="/">
-                <a>
-                  <img
-                    src="/assets/sosmed/twitter.svg"
-                    className="h-6 w-6"
-                    alt=""
-                  />
-                </a>
+                <img
+                  src="/assets/sosmed/twitter.svg"
+                  className="h-6 w-6"
+                  alt=""
+                />
               </Link>
             </li>
           </ul>
         </div>
         <div className="ml-0 md:ml-auto mt-5 md:mt-0">
-          <h2 className="text-2xl font-bold text-white">Travelku.</h2>
+          <h2 className="text-2xl font-bold text-white">Exploring England.</h2>
         </div>
       </div>
     </div>

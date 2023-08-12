@@ -8,12 +8,9 @@ const BottomBar = () => {
   return (
     <div className="fixed bottom-0 left-0 w-full z-30 lg:hidden">
       <div className="flex justify-center bg-white border-t border-gray-300">
-        <Link href="/">
-          <a
-            className={`py-2 w-3/12 flex flex-col justify-center items-center ${
+        <Link href=""  className={`py-2 w-3/12 flex flex-col justify-center items-center ${
               router.pathname == "/" ? "text-red-500" : "text-gray-500"
-            }`}
-          >
+            }`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -29,14 +26,10 @@ const BottomBar = () => {
             <label htmlFor="" className="inline-block text-xs pt-1">
               Home
             </label>
-          </a>
         </Link>
-        <Link href="/login">
-          <a
-            className={`py-2 w-3/12 flex flex-col justify-center items-center ${
+        <Link href="/login"  className={`py-2 w-3/12 flex flex-col justify-center items-center ${
               router.pathname == "/login" ? "text-red-500" : "text-gray-500"
-            }`}
-          >
+            }`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -53,7 +46,6 @@ const BottomBar = () => {
             <label htmlFor="" className="inline-block text-xs pt-1">
               Masuk
             </label>
-          </a>
         </Link>
       </div>
     </div>
@@ -84,7 +76,7 @@ const Navbar = () => {
     <nav
       className={`p-4 px-5 md:px-20  flex items-center w-full ${pastSplash}`}
     >
-      <h4 className="text-2xl font-semibold text-red-500">Travelku</h4>
+      <h4 className="text-2xl font-semibold text-red-600">Exploring England</h4>
 
       <div className="ml-auto hidden md:block">
         <div className="flex items-center justify-between">
@@ -95,15 +87,15 @@ const Navbar = () => {
               placeholder="Search destination"
             />
           )}
-          <a href="" className="mx-4">
+          <Link href="/login" className="mx-4">
             Login
-          </a>
-          <a
+          </Link>
+          <Link
             href=""
-            className="px-5 py-2 text-white rounded-full bg-red-500 mx-4 text-sm"
+            className="px-5 py-2 text-white rounded-full bg-red-600 mx-4 text-sm"
           >
             Register
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

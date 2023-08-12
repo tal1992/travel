@@ -49,7 +49,7 @@ export const Banner = () => {
         infinite={true}
       >
         {dataReview.map((item, key) => (
-          <div className="mx-2">
+          <div className="mx-2" key={key}>
             <img src={item.image_url} alt="" className="rounded-xl" />
           </div>
         ))}

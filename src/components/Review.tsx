@@ -58,7 +58,7 @@ export const PeopleReview = (props) => {
         itemClass="pr-8"
       >
         {dataReview.map((item, key) => (
-          <div className="bg-white border p-10 rounded-lg">
+          <div className="bg-white border p-10 rounded-lg" key={key}>
             <p className="leading-relaxed italic">
               “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

@@ -7,22 +7,22 @@ import { Banner } from "../components/Banner";
 import { Footer } from "../components/Footer";
 
 const DEFAULT_SEO = {
-  title: "Travel Site (Apsyadira)",
-  description: "Example travel web built with NextJS and Tailwindcss",
+  title: "Exploring England",
+  description:"Discover the best tourist attractions of the UK",
   openGraph: {
     type: "website",
     locale: "en_IE",
-    url: "https://apsyadira.com",
-    title: "Travel Site (Apsyadira)",
-    description: "Example travel web built with NextJS and Tailwindcss",
+    url: "https://exploringengland.uk",
+    title: "",
+    description: "Discover the best tourist attractions of the UK",
     image:
       "https://prismic-io.s3.amazonaws.com/gary-blog%2F3297f290-a885-4cc6-9b19-3235e3026646_default.jpg",
-    site_name: "apsyadira.com",
+    site_name: "https://exploringengland.uk",
     imageWidth: 1200,
     imageHeight: 1200,
   },
   twitter: {
-    handle: "@garmeeh",
+    handle: "@iamtalvinder",
     cardType: "summary_large_image",
   },
 };
@@ -31,17 +31,17 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Travel Site (Apsyadira)"
+        title="Exploring England"
         description="Example travel web built with NextJS and Tailwindcss"
         openGraph={DEFAULT_SEO}
         additionalMetaTags={[
           {
             property: "dc:creator",
-            content: "Apsyadira",
+            content: "Exploring England",
           },
           {
             name: "application-name",
-            content: "Travel Web (Apsyadira)",
+            content: "Exploring England",
           },
         ]}
       />
@@ -86,7 +86,7 @@ export default function Home() {
                 autem accusamus aut aperiam sed illo consectetur odit impedit
                 distinctio! Laborum vitae itaque quo molestias.
               </p>
-              <button className="bg-red-500 rounded-full px-5 py-3 shadow-md mt-10 text-white w-2/4">
+              <button className="bg-red-600 rounded-full px-5 py-3 shadow-md mt-10 text-white w-2/4">
                 Contact Us
               </button>
             </div>

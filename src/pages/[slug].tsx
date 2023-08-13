@@ -5,7 +5,7 @@ import { MDXRemote } from "next-mdx-remote";
 import Head from "next/head";
 import H1 from "../components/mdx/H1";
 import React from "react";
-import P from "../components/mdx/P";
+import Paragraph from "../components/mdx/Paragraph";
 import H2 from "../components/mdx/H2";
 import { MainLayout } from "../components/Layout/MainLayout";
 import { ArticleHero } from "../components/mdx/ArticleHero";
@@ -30,7 +30,7 @@ export default function PostPage({
               h1: H1,
               ArticleHero: ArticleHero,
               h2: H2,
-              p: P,
+              p: Paragraph,
               Date: PublishDate,
             }}
           />

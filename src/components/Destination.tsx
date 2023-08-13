@@ -3,52 +3,61 @@ import Link from "next/link";
 export const Destination = () => {
   const dataImage = [
     {
-      image_url:
-        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80",
+      name: "Buckingham palace",
+      image_url: "assets/blog/buchingham.webp",
       rate: "4.6",
+      link: "/Buckingham-palace",
     },
     {
-      image_url:
-        "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      rate: "5.0",
+      name: "Big Ben",
+      image_url: "assets/bigbenheader.webp",
+      rate: "4.8",
+      link: "/big-ben",
     },
     {
       image_url:
         "https://images.unsplash.com/photo-1498855926480-d98e83099315?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       rate: "4.6",
+      link: "/",
     },
     {
       image_url:
         "https://images.unsplash.com/photo-1579981633051-529120895bac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       rate: "4.6",
+      link: "/",
     },
     {
       image_url:
         "https://images.unsplash.com/photo-1516370873344-fb7c61054fa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       rate: "4.6",
+      link: "/",
     },
     {
       image_url:
         "https://images.unsplash.com/photo-1565619109666-b8bfe0e95ceb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       rate: "4.6",
+      link: "/",
     },
     {
       image_url:
         "https://images.unsplash.com/photo-1515315230580-4299548a2e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       rate: "4.6",
+      link: "/",
     },
     {
       image_url:
         "https://images.unsplash.com/photo-1586016413664-864c0dd76f53?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       rate: "4.6",
+      link: "/",
     },
   ];
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-20">
       {dataImage.map((item, key) => (
         <div className="" key={key}>
-          <Link href="/">
+          <Link href={item.link}>
             <img
+              style={{ minHeight: "165px" }}
               src={item.image_url}
               className="object-cover rounded-md hover:opacity-75"
               alt=""
@@ -76,7 +85,7 @@ export const Destination = () => {
                 <label className="mx-2 text-sm">{item.rate}</label>
               </div>
               <div className="">
-                <h4 className="font-semibold mt-1">Lorem Ipsum</h4>
+                <h4 className="font-semibold mt-1">{item.name}</h4>
                 <label htmlFor="" className="text-gray-500">
                   17 place to visit
                 </label>

@@ -76,8 +76,7 @@ const Navbar = () => {
     <nav
       className={`p-4 px-5 md:px-20  flex items-center w-full ${pastSplash}`}
     >
-      <h4 className="text-2xl font-semibold text-red-600">Exploring England</h4>
-
+      <h4 className="text-2xl font-semibold text-red-600"><Link href="/">Exploring England</Link></h4>
       <div className="ml-auto hidden md:block">
         <div className="flex items-center justify-between">
           {showSearch && (

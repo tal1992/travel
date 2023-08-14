@@ -7,6 +7,10 @@ import H1 from "../components/mdx/H1";
 import React from "react";
 import Paragraph from "../components/mdx/Paragraph";
 import H2 from "../components/mdx/H2";
+import H3 from "../components/mdx/H3";
+import List from "../components/mdx/List";
+import LI from "../components/mdx/LI";
+import Strong from "../components/mdx/strong";
 import { MainLayout } from "../components/Layout/MainLayout";
 import { ArticleHero } from "../components/mdx/ArticleHero";
 
@@ -30,13 +34,17 @@ export default function PostPage({
               h1: H1,
               ArticleHero: ArticleHero,
               h2: H2,
+              h3: H3,
               p: Paragraph,
               Date: PublishDate,
+              ul: List,
+              li: LI,
+              strong: Strong,
             }}
           />
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </MainLayout>
   );
 }
@@ -51,23 +59,19 @@ export async function getStaticProps(
 ) {
   const { slug } = ctx.params!;
 
-  console.log('the slug --', slug);
-
   // retrieve the MDX blog post file associated
   // with the specified slug parameter
   const postFile = fs.readFileSync(`src/_posts/${slug}.mdx`);
-  console.log('the postFile --', postFile);
-
 
   // read the MDX serialized content along with the frontmatter
   // from the .mdx blog post file
   const mdxSource = await serialize(postFile, { parseFrontmatter: true });
 
-  console.log('the mdxSource --', mdxSource);
-  
   return {
     props: {
       source: mdxSource,
     },
+    // enable ISR
+    revalidate: 60,
   };
 }

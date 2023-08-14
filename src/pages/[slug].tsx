@@ -51,13 +51,20 @@ export async function getStaticProps(
 ) {
   const { slug } = ctx.params!;
 
+  console.log('the slug --', slug);
+
   // retrieve the MDX blog post file associated
   // with the specified slug parameter
   const postFile = fs.readFileSync(`src/_posts/${slug}.mdx`);
+  console.log('the postFile --', postFile);
+
 
   // read the MDX serialized content along with the frontmatter
   // from the .mdx blog post file
   const mdxSource = await serialize(postFile, { parseFrontmatter: true });
+
+  console.log('the mdxSource --', mdxSource);
+  
   return {
     props: {
       source: mdxSource,

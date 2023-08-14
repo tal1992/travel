@@ -6,7 +6,7 @@ export const Destination = () => {
       name: "Buckingham palace",
       image_url: "assets/blog/buchingham.webp",
       rate: "4.6",
-      link: "/Buckingham-palace",
+      link: "/buckingham-palace",
     },
     {
       name: "Big Ben",

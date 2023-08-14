@@ -13,7 +13,7 @@ import LI from "../components/mdx/LI";
 import Strong from "../components/mdx/strong";
 import { MainLayout } from "../components/Layout/MainLayout";
 import { ArticleHero } from "../components/mdx/ArticleHero";
-
+import path from 'path';
 import { Footer } from "../components/Footer";
 import PublishDate from "../components/mdx/PublishDate";
 
@@ -61,7 +61,7 @@ export async function getStaticProps(
 
   // retrieve the MDX blog post file associated
   // with the specified slug parameter
-  const postFile = fs.readFileSync(`src/_posts/${slug}.mdx`);
+  const postFile = fs.readFileSync(path.resolve(`./src/_posts/${slug}.mdx`), 'utf-8')
 
   // read the MDX serialized content along with the frontmatter
   // from the .mdx blog post file

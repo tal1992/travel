@@ -15,40 +15,40 @@ export const Destination = () => {
       link: "/big-ben",
     },
     {
-      image_url:
-        "https://images.unsplash.com/photo-1498855926480-d98e83099315?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      rate: "4.6",
-      link: "/",
+      name: "Cotswolds",
+      image_url: "assets/blog/cotswolds.webp",
+      rate: "4.7",
+      link: "/cotswolds",
     },
     {
-      image_url:
-        "https://images.unsplash.com/photo-1579981633051-529120895bac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      rate: "4.6",
-      link: "/",
+      name: "Hampstead Heath",
+      image_url: "assets/blog/hampstead.webp",
+      rate: "4.7",
+      link: "/hampstead",
     },
     {
-      image_url:
-        "https://images.unsplash.com/photo-1516370873344-fb7c61054fa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      name: "Canary Wharf",
+      image_url: "assets/blog/canary.webp",
       rate: "4.6",
-      link: "/",
+      link: "/canary-wharf",
     },
     {
-      image_url:
-        "https://images.unsplash.com/photo-1565619109666-b8bfe0e95ceb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      rate: "4.6",
-      link: "/",
+      name: "Tower Bridge",
+      image_url: "assets/blog/tower-bridge.jpg",
+      rate: "4.8",
+      link: "/tower-bridge",
     },
     {
-      image_url:
-        "https://images.unsplash.com/photo-1515315230580-4299548a2e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      rate: "4.6",
-      link: "/",
+      name: "British Museum",
+      image_url: "assets/blog/british-museum.webp",
+      rate: "4.8",
+      link: "/british-museum",
     },
     {
-      image_url:
-        "https://images.unsplash.com/photo-1586016413664-864c0dd76f53?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      name: "Sky Garden",
+      image_url: "assets/blog/sky-gardens.webp",
       rate: "4.6",
-      link: "/",
+      link: "/sky-garden",
     },
   ];
   return (
@@ -57,10 +57,9 @@ export const Destination = () => {
         <div className="" key={key}>
           <Link href={item.link}>
             <img
-              style={{ minHeight: "165px" }}
               src={item.image_url}
-              className="object-cover rounded-md hover:opacity-75"
-              alt=""
+              className="object-cover rounded-md hover:opacity-75 card-images"
+              alt={item.name}
             />
 
             <div className="py-3">

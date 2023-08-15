@@ -70,7 +70,7 @@ export default function Home() {
           </div>
           <PeopleReview />
         </div>
-        <div className="py-20">
+        {/* <div className="py-20">
           <div className="flex flex-col lg:flex-row justify-between">
             <div className="w-full lg:w-5/12 px-5 lg:px-20 ">
               <h4 className="text-4xl font-bold">
@@ -90,7 +90,7 @@ export default function Home() {
               <Banner />
             </div>
           </div>
-        </div>
+        </div> */}
         <Footer />
       </MainLayout>
     </>

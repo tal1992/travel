@@ -1,4 +1,5 @@
 import Carousel from "react-multi-carousel";
+import "./HeroCarousel.module.css";
 import "react-multi-carousel/lib/styles.css";
 export const HeroCarousel = () => {
   const dataReview = [
@@ -34,7 +35,7 @@ export const HeroCarousel = () => {
       items: 1,
     },
     mobile: {
-      breakpoint: { max: 500, min: 500 },
+      breakpoint: { max: 600, min: 0 },
       items: 1,
     },
   };
@@ -50,10 +51,13 @@ export const HeroCarousel = () => {
         autoPlay={true}
         autoPlaySpeed={3000}
         arrows={false}
+        itemClass="carousel-item"
+        containerClass={`carousel-container-home`}
+
       >
         {dataReview.map((item, key) => (
-          <div className="mx-2" key={key}>
-            <img src={item.image_url} alt="" className="rounded-xl" />
+          <div className="mx-0 lg:mx-2" key={key}>
+            <img src={item.image_url} alt="" className="lg:rounded-xl hero-images" />
           </div>
         ))}
       </Carousel>

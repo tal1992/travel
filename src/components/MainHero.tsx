@@ -3,9 +3,9 @@ import {HeroCarousel} from "./HeroCarousel";
 
 export const MainHero = () => {
   return (
-    <div className="py-20 pb-10" style={{ backgroundColor: "#FFF7F5" }}>
-      <div className="flex justify-between  items-start px-5 md:px-20">
-        <div className="w-full lg:w-2/5">
+    <div className="lg:py-20 lg:pb-10" style={{ backgroundColor: "#FFF7F5" }}>
+      <div className="flex justify-between items-start px-0 lg:px-20">
+        <div className="w-full hidden lg:block lg:w-2/5">
           <h1 className="text-4xl font-bold">London is Calling !</h1>
           <div className="bg-white shadow-sm p-5 mt-5 rounded-lg">
             <input
@@ -29,7 +29,7 @@ export const MainHero = () => {
             </div>
           </div>
         </div>
-        <div className="w-2/5 hidden lg:block">
+        <div className="lg:w-2/5 lg:block">
           {/* <img
             src="/assets/bigbenheader.jpg"
             alt=""

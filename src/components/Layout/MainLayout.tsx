@@ -50,7 +50,7 @@ const BottomBar = () => {
             </g>
           </svg>
           <label htmlFor="" className="inline-block text-xs pt-1">
-            Masuk
+            User
           </label>
         </Link>
       </div>

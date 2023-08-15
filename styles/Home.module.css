@@ -52,6 +52,10 @@
   font-size: 4rem;
 }
 
+.list-disc li {
+  padding-bottom: 10px;
+}
+
 .title,
 .description {
   text-align: center;

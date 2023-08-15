@@ -48,11 +48,9 @@ export default function Home() {
       <MainLayout>
         <MainHero />
         <div className="px-5 md:px-20 py-10">
-          <h4 className="text-3xl font-semibold">Top Destination</h4>
+          <h4 className="text-3xl font-semibold">Experience History, Culture, and Nature</h4>
           <p className="mt-8 w-full md:w-2/4 leading-relaxed font-semibold text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam.
+          Explore historic landmarks, savor diverse cuisines, and indulge in world-class entertainment. Your journey to Britain promises a fusion of unforgettable moments that will linger in your heart forever.
           </p>
           <Destination />
           <div className="flex justify-center mt-10">
@@ -64,17 +62,15 @@ export default function Home() {
         <div className="px-5 md:px-20 py-10">
           <div className="container mx-auto text-center w-full lg:w-2/5">
             <h4 className="text-3xl font-semibold">
-              What travellers say about us
+              What travellers says
             </h4>
             <p className="mt-8 leading-relaxed font-semibold text-gray-700 ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
+            Travelers consistently praise the United Kingdom for its rich history, diverse culture, and iconic attractions. The blend of modernity and tradition, from historic landmarks to vibrant cities, creates a captivating ambiance that leaves a lasting impression.
             </p>
           </div>
           <PeopleReview />
         </div>
-        <div className="py-20">
+        {/* <div className="py-20">
           <div className="flex flex-col lg:flex-row justify-between">
             <div className="w-full lg:w-5/12 px-5 lg:px-20 ">
               <h4 className="text-4xl font-bold">
@@ -94,7 +90,7 @@ export default function Home() {
               <Banner />
             </div>
           </div>
-        </div>
+        </div> */}
         <Footer />
       </MainLayout>
     </>

@@ -1,12 +1,13 @@
 import React from "react";
-import {HeroCarousel} from "./HeroCarousel";
 
-export const MainHero = () => {
+export const ArticleHero = ({ src, alt }: { src: string; alt: string }) => {
   return (
-    <div className="py-20 pb-10" style={{ backgroundColor: "#FFF7F5" }}>
-      <div className="flex justify-between  items-start px-5 md:px-20">
-        <div className="w-full lg:w-2/5">
-          <h1 className="text-4xl font-bold">London is Calling !</h1>
+    <div className="pb-5">
+      <div className="flex justify-between items-center">
+        {/* <div className="w-full lg:w-2/5">
+          <h1 className="text-4xl font-bold">
+           London is awesome !
+          </h1>
           <div className="bg-white shadow-sm p-5 mt-5 rounded-lg">
             <input
               type="text"
@@ -30,14 +31,21 @@ export const MainHero = () => {
           </div>
         </div>
         <div className="w-2/5 hidden lg:block">
-          {/* <img
+          <img
             src="/assets/bigbenheader.jpg"
             alt=""
             className="block w-full right-0 object-cover"
             style={{ borderRadius: "0px 0px 0px 7rem" }}
-          /> */}
+          />
+        </div> */}
 
-          <HeroCarousel />
+        <div className="lg:block">
+          <img
+            src={src}
+            alt={alt}
+            className="block w-full right-0 object-cover"
+            style={{ borderRadius: "10px" }}
+          />
         </div>
       </div>
     </div>

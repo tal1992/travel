@@ -27,6 +27,7 @@
 .react-autosuggest__suggestions-container--open {
   position: relative;
   display: block;
+  overflow: hidden;
 }
 /* Styles for each suggestion item */
 .react-autosuggest__suggestion {

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Autosuggest from 'react-autosuggest';
+import { locations } from "../../data/locations";
 
 const BottomBar = () => {
   const router = useRouter();
@@ -39,6 +41,53 @@ const Navbar = () => {
   const [pastSplash, setPastSplash] = useState("");
   const [showSearch, setShowSearch] = useState(false);
 
+  const options = locations;
+
+  const getSuggestions = (value) => {
+    const inputValue = value.trim().toLowerCase();
+    const inputLength = inputValue.length;
+  
+    return inputLength === 0
+      ? []
+      : options.filter((option) =>
+          option.name.toLowerCase().includes(inputValue)
+        );
+  };
+  
+  const renderSuggestion = (suggestion) => (
+    <div>{suggestion.name}</div>
+  );
+  
+    const [value, setValue] = useState('');
+    const [suggestions, setSuggestions] = useState([]);
+  
+    const onChange = (event, { newValue }) => {
+      setValue(newValue);
+    };
+  
+    const onSuggestionsFetchRequested = ({ value }) => {
+      setSuggestions(getSuggestions(value));
+    };
+  
+    const onSuggestionsClearRequested = () => {
+      setSuggestions([]);
+    };
+  
+    const onSuggestionSelected = (event, { suggestion }) => {
+      window.location.href = suggestion.link;
+    };
+
+    const shouldRenderSuggestions = (value) => value.trim().length > 0;
+
+  
+    const inputProps = {
+      placeholder: 'Search for destination',
+      value,
+      className: 'px-5 py-2 rounded-full border  focus:outline-none text-sm w-full placeholder-gray-800',
+      onChange,
+    };
+
+
   function handleScroll(e) {
     if (window.scrollY > Math.round(window.innerHeight / 2)) {
       setPastSplash(
@@ -57,26 +106,31 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`p-4 px-5 md:px-20  flex items-center w-full ${pastSplash}`}
+      className={`p-4 px-5 md:px-20  grid grid-cols-2 gap-4 w-full ${pastSplash}`}
     >
-      <h4 className="text-2xl font-semibold text-red-600">
+      <h4 className="col-span-1 text-2xl font-semibold text-red-600">
         <Link href="/">
           <span>Exploring</span>
           <span className="pt-2"> England</span>
         </Link>
       </h4>
-      <div className="ml-auto hidden md:block">
-        <div className="flex items-center justify-between">
+      <div className="col-span-1 ml-auto md:block">
+        <div className="flex items-center justify-between overflow-hidden">
           {showSearch && (
-            <input
-              type="text"
-              className="px-5 py-2 rounded-full border  focus:outline-none text-sm w-full placeholder-gray-800"
-              placeholder="Search destination"
-            />
+            <Autosuggest
+            suggestions={suggestions}
+            onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+            onSuggestionsClearRequested={onSuggestionsClearRequested}
+            onSuggestionSelected={onSuggestionSelected}
+            getSuggestionValue={(suggestion) => suggestion.name}
+            renderSuggestion={renderSuggestion}
+            inputProps={inputProps}
+            shouldRenderSuggestions={shouldRenderSuggestions}
+          />
           )}
           <Link
             href=""
-            className="px-5 py-2 text-white rounded-full bg-red-600 mx-4 text-sm"
+            className="px-5 py-2 text-white rounded-full bg-red-600 mx-4 text-sm hidden"
           >
             Register
           </Link>

@@ -20,7 +20,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="legal mr-20 mt-5 md:mt-0">
+        {/* <div className="legal mr-20 mt-5 md:mt-0">
           <h4 className="text-lg font-semibold text-white">LEGAL</h4>
           <ul className="mt-2 text-white text-sm">
             <li className="py-3">
@@ -30,7 +30,7 @@ export const Footer = () => {
               <Link href="#">Privacy Policy</Link>
             </li>
           </ul>
-        </div>
+        </div> */}
         <div className="legal mt-5 md:mt-0">
           <h4 className="text-lg font-semibold text-white">Social</h4>
           <ul className="mt-2 text-white text-sm flex">

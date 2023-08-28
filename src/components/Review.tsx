@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import LazyLoadImage from "./LazyLoadImage";
 export const PeopleReview = (props) => {
   const dataReview = [
     {
@@ -67,10 +68,10 @@ export const PeopleReview = (props) => {
             </p>
             <div className="mt-10">
               <div className="flex items-center">
-                <img
+                <LazyLoadImage
                   src={item.image_url}
-                  alt=""
-                  className="h-10 w-10 object-cover"
+                  alt={item.name}
+                  className="h-10 w-10 object-cover review"
                 />
                 <h4 className="ml-5">{item.name}</h4>
               </div>

@@ -30,29 +30,6 @@ const BottomBar = () => {
             Home
           </label>
         </Link>
-        <Link
-          href="/login"
-          className={`py-2 w-3/12 flex flex-col justify-center items-center ${
-            router.pathname == "/login" ? "text-red-500" : "text-gray-500"
-          }`}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            className="w-8 h-8 fill-current inline-block"
-          >
-            <g data-name="Layer 2">
-              <g data-name="person">
-                <rect width="24" height="24" opacity="0" />
-                <path d="M12 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0-6a2 2 0 1 1-2 2 2 2 0 0 1 2-2z" />
-                <path d="M12 13a7 7 0 0 0-7 7 1 1 0 0 0 2 0 5 5 0 0 1 10 0 1 1 0 0 0 2 0 7 7 0 0 0-7-7z" />
-              </g>
-            </g>
-          </svg>
-          <label htmlFor="" className="inline-block text-xs pt-1">
-            User
-          </label>
-        </Link>
       </div>
     </div>
   );
@@ -97,9 +74,6 @@ const Navbar = () => {
               placeholder="Search destination"
             />
           )}
-          <Link href="/login" className="mx-4">
-            Login
-          </Link>
           <Link
             href=""
             className="px-5 py-2 text-white rounded-full bg-red-600 mx-4 text-sm"
@@ -117,7 +91,7 @@ export const MainLayout = ({ children }) => {
     <>
       <Navbar />
       <div>{children}</div>
-      <BottomBar />
+      {/* <BottomBar /> */}
     </>
   );
 };

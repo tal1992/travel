@@ -7,7 +7,7 @@ export const Footer = () => {
           <h4 className="text-lg font-semibold text-white">MENU</h4>
           <ul className="mt-2 text-white text-sm">
             <li className="py-3">
-              <Link href="#">Home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li className="py-3">
               <Link href="#">About Us</Link>
@@ -35,7 +35,7 @@ export const Footer = () => {
           <h4 className="text-lg font-semibold text-white">Social</h4>
           <ul className="mt-2 text-white text-sm flex">
             <li className="mr-3">
-              <Link href="#">
+              <Link href="https://www.facebook.com/weloveearth" target="_blank">
                 <img
                   src="/assets/sosmed/facebook.svg"
                   className="h-5 w-5"

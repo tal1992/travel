@@ -1,4 +1,5 @@
 import React from "react";
+import LazyLoadImage from "../LazyLoadImage";
 
 export const ArticleHero = ({ src, alt }: { src: string; alt: string }) => {
   return (
@@ -40,7 +41,7 @@ export const ArticleHero = ({ src, alt }: { src: string; alt: string }) => {
         </div> */}
 
         <div className="lg:block">
-          <img
+          <LazyLoadImage
             src={src}
             alt={alt}
             className="block w-full right-0 object-cover"

@@ -11,3 +11,30 @@
     width: 100vw;
   }
 }
+
+.react-autosuggest__suggestions-container {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 2;
+  display: none;
+}
+
+.react-autosuggest__suggestions-container--open {
+  position: relative;
+  display: block;
+}
+/* Styles for each suggestion item */
+.react-autosuggest__suggestion {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Styles for highlighted suggestion item */
+.react-autosuggest__suggestion--highlighted {
+  background-color: #f0f0f0;
+}

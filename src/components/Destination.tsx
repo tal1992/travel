@@ -1,66 +1,15 @@
 import React from "react";
 import Link from "next/link";
+import LazyLoadImage from "./LazyLoadImage";
+import {locations} from '../data/locations';
 export const Destination = () => {
-  const dataImage = [
-    {
-      name: "Buckingham palace",
-      image_url: "assets/blog/buchingham.webp",
-      rate: "4.6",
-      link: "/buckingham-palace",
-    },
-    {
-      name: "Big Ben",
-      image_url: "assets/bigbenheader.webp",
-      rate: "4.8",
-      link: "/big-ben",
-    },
-    {
-      name: "Cotswolds",
-      image_url: "assets/blog/cotswolds.webp",
-      rate: "4.7",
-      link: "/cotswolds",
-    },
-    {
-      name: "Hampstead Heath",
-      image_url: "assets/blog/hampstead.webp",
-      rate: "4.7",
-      link: "/hampstead",
-    },
-    {
-      name: "Canary Wharf",
-      image_url: "assets/blog/canary.webp",
-      rate: "4.6",
-      link: "/canary-wharf",
-    },
-    {
-      name: "Tower Bridge",
-      image_url: "assets/blog/tower-bridge.jpg",
-      rate: "4.8",
-      link: "/tower-bridge",
-    },
-    {
-      name: "British Museum",
-      image_url: "assets/blog/british-museum.webp",
-      rate: "4.8",
-      link: "/british-museum",
-    },
-    {
-      name: "Sky Garden",
-      image_url: "assets/blog/sky-gardens.webp",
-      rate: "4.6",
-      link: "/sky-garden",
-    },
-  ];
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-20">
-      {dataImage.map((item, key) => (
+      {locations.map((item, key) => (
         <div className="" key={key}>
           <Link href={item.link}>
-            <img
-              src={item.image_url}
-              className="object-cover rounded-md hover:opacity-75 card-images"
-              alt={item.name}
-            />
+          <LazyLoadImage src={item.image_url} alt={item.name} className="object-cover rounded-md hover:opacity-75 card-images"/>
 
             <div className="py-3">
               <div className="flex items-center">
@@ -85,9 +34,9 @@ export const Destination = () => {
               </div>
               <div className="">
                 <h4 className="font-semibold mt-1">{item.name}</h4>
-                <label htmlFor="" className="text-gray-500">
-                  17 place to visit
-                </label>
+                {/* <label htmlFor="" className="text-gray-500">
+                  {item.description}
+                </label> */}
               </div>
             </div>
           </Link>

@@ -10,7 +10,7 @@ export const Footer = () => {
               <Link href="/">Home</Link>
             </li>
             <li className="py-3">
-              <Link href="#">About Us</Link>
+              <Link href="about">About Us</Link>
             </li>
             <li className="py-3">
               <Link href="#">Contact</Link>

@@ -32,8 +32,9 @@ export default function Home() {
     <>
       <NextSeo
         title="Exploring England"
-        description="Example travel web built with NextJS and Tailwindcss"
+        description="Discover the best of England from the bustling streets of London to the rolling hills of the Cotswolds. Find inspiration for your next adventure, book your accommodation, and get the latest travel news and updates."
         openGraph={DEFAULT_SEO}
+        
         additionalMetaTags={[
           {
             property: "dc:creator",
@@ -43,8 +44,13 @@ export default function Home() {
             name: "application-name",
             content: "Exploring England",
           },
+          {
+            name: "viewport",
+            content: "width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no",
+          },
         ]}
       />
+      
       <MainLayout>
         <MainHero />
         <div className="px-5 md:px-20 py-10">

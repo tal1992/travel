@@ -19,17 +19,19 @@ import PublishDate from "../components/mdx/PublishDate";
 import { locations } from "../data/locations";
 import Link from "next/link";
 import LazyLoadImage from "../components/LazyLoadImage";
+import { NextSeo } from "next-seo";
 export default function PostPage({
   source,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-
   const [randomLocations, setRandomLocations] = useState([]);
   const locationsArray = locations; // Your array of locations
 
   useEffect(() => {
     if (locationsArray.length > 0) {
       const randomIndexes = getRandomIndexes(locationsArray.length, 5);
-      const selectedLocations = randomIndexes.map((index) => locationsArray[index]);
+      const selectedLocations = randomIndexes.map(
+        (index) => locationsArray[index]
+      );
       setRandomLocations(selectedLocations);
     }
   }, [locationsArray]);
@@ -45,7 +47,7 @@ export default function PostPage({
     }
     return indexes;
   }
-  
+
   return (
     <MainLayout>
       <div className="lg:flex items-start justify-between">
@@ -54,6 +56,37 @@ export default function PostPage({
             <Head>
               <title>{source.frontmatter.title as string}</title>
             </Head>
+            <NextSeo
+                title={source.frontmatter.title as string}
+                description={source.frontmatter.description as string}
+                openGraph={{
+                  title: source.frontmatter.title as string,
+                  description:source.frontmatter.description as string,
+                  images: [
+                    {
+                      url: source.frontmatter.previewImage as string,
+                      width: 1200,
+                      height: 630, 
+                      alt: source.frontmatter.title as string,
+                    },
+                  ],              
+                }}
+                additionalMetaTags={[
+                  {
+                    property: "dc:creator",
+                    content: "Exploring England",
+                  },
+                  {
+                    name: "application-name",
+                    content: "Exploring England",
+                  },
+                  {
+                    name: "viewport",
+                    content:
+                      "width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no",
+                  },
+                ]}
+              />
             <MDXRemote
               {...source}
               // specifying the custom MDX components
@@ -88,7 +121,9 @@ export default function PostPage({
 
                   <div className="w-3/5 lg:w-3/5 ml-3">
                     <div className="">
-                      <h3 className="font-semibold lg:text-sm lg:mt-1 truncate">{item.name}</h3>
+                      <h3 className="font-semibold lg:text-sm lg:mt-1 truncate">
+                        {item.name}
+                      </h3>
                     </div>
                     <div className="flex items-center mt-3">
                       <svg

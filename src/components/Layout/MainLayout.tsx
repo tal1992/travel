@@ -108,14 +108,14 @@ const Navbar = () => {
     <nav
       className={`p-4 px-5 md:px-20  grid grid-cols-2 gap-4 w-full ${pastSplash}`}
     >
-      <h4 className="col-span-1 text-2xl font-semibold text-red-600">
+      <h4 className="col-span-1 text-lg md:text-2xl  font-semibold text-red-600">
         <Link href="/">
           <span>Exploring</span>
           <span className="pt-2"> England</span>
         </Link>
       </h4>
-      <div className="col-span-1 ml-auto md:block">
-        <div className="flex items-center justify-between overflow-hidden">
+      <div className="col-span-1 ml-auto md:block overflow-hidden	">
+        <div className="flex items-center justify-between overflow-hidden search-container">
           {showSearch && (
             <Autosuggest
             suggestions={suggestions}

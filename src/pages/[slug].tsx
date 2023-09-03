@@ -79,12 +79,7 @@ export default function PostPage({
                   {
                     name: "application-name",
                     content: "Exploring England",
-                  },
-                  {
-                    name: "viewport",
-                    content:
-                      "width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no",
-                  },
+                  }
                 ]}
               />
             <MDXRemote

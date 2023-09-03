@@ -7,17 +7,17 @@ export const Footer = () => {
           <h4 className="text-lg font-semibold text-white">MENU</h4>
           <ul className="mt-2 text-white text-sm">
             <li className="py-3">
-              <Link href="/">Home</Link>
+              <Link href="/" title="home">Home</Link>
             </li>
             <li className="py-3">
-              <Link href="about">About Us</Link>
+              <Link href="about" title="about us">About Us</Link>
             </li>
             <li className="py-3">
-              <Link href="#">Contact</Link>
+              <Link href="mailto:team.exploringengland@gmail.com" title="contact us">Contact - team.exploringengland@gmail.com</Link>
             </li>
-            <li className="py-3">
+            {/* <li className="py-3">
               <Link href="#">FAQ</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         {/* <div className="legal mr-20 mt-5 md:mt-0">
@@ -35,7 +35,7 @@ export const Footer = () => {
           <h4 className="text-lg font-semibold text-white">Social</h4>
           <ul className="mt-2 text-white text-sm flex">
             <li className="mr-3">
-              <Link href="https://www.facebook.com/weloveearth" target="_blank">
+              <Link href="https://www.facebook.com/weloveearth" target="_blank" title="facebook">
                 <img
                   src="/assets/sosmed/facebook.svg"
                   className="h-5 w-5"
@@ -44,7 +44,7 @@ export const Footer = () => {
               </Link>
             </li>
             <li className="mr-3">
-              <Link href="#">
+              <Link href="https://www.instagram.com/iamtalvinder"  target="_blank" title="instagram">
                 <img
                   src="/assets/sosmed/instagram.svg"
                   className="h-6 w-6"
@@ -52,7 +52,7 @@ export const Footer = () => {
                 />
               </Link>
             </li>
-            <li className="mr-3">
+            {/* <li className="mr-3">
               <Link href="/">
                 <img
                   src="/assets/sosmed/twitter.svg"
@@ -60,7 +60,7 @@ export const Footer = () => {
                   alt=""
                 />
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="ml-0 md:ml-auto mt-5 md:mt-0">

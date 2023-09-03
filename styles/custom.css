@@ -39,3 +39,9 @@
 .react-autosuggest__suggestion--highlighted {
   background-color: #f0f0f0;
 }
+
+.search-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}

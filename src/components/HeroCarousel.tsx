@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "./HeroCarousel.module.css";
 import "react-multi-carousel/lib/styles.css";
-import LazyLoadImage from "./LazyLoadImage";
+import Image from "next/image"; // Import the Image component from next/image
 export const HeroCarousel = () => {
   const dataReview = [
     {
@@ -12,12 +12,12 @@ export const HeroCarousel = () => {
     {
       image_url: "/assets/cathedral.webp",
       name: "St. Paul Catherdral",
-      lazyLoad: true,
+      lazyLoad: false,
     },
     {
       image_url: "/assets/canarywharf.webp",
       name: "Canary Wharf",
-      lazyLoad: true,
+      lazyLoad: false,
     },
   ];
 
@@ -49,37 +49,24 @@ export const HeroCarousel = () => {
         draggable={false}
         showDots={true}
         infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={3000}
-        arrows={false}
+        autoPlay={false}
+        autoPlaySpeed={5000}
+        arrows={true}
         itemClass="carousel-item"
         containerClass={`carousel-container-home`}
       >
         {dataReview.map((item) => (
-          <div className="mx-0 lg:mx-2" key={`${item.name}`}>
-            {item.lazyLoad ? (
-              <>
-                <LazyLoadImage
-                  src={item.image_url}
-                  alt={item.name}
-                  className="lg:rounded-xl hero-images"
-                />
-                <p className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-2">
-                  {item.name}
-                </p>
-              </>
-            ) : (
-              <>
-                <img
-                  src={item.image_url}
-                  alt={item.name}
-                  className="lg:rounded-xl hero-images"
-                />
-                <p className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-2">
-                  {item.name}
-                </p>
-              </>
-            )}
+          <div className="mx-0" key={`${item.name}`}>
+            <Image
+              src={item.image_url}
+              alt={item.name}
+              width={1920} // Adjust the width and height as needed
+              height={1080}
+              className="lg:rounded-xl hero-images"
+            />
+            <p className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-2">
+              {item.name}
+            </p>
           </div>
         ))}
       </Carousel>

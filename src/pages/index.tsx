@@ -43,11 +43,7 @@ export default function Home() {
           {
             name: "application-name",
             content: "Exploring England",
-          },
-          {
-            name: "viewport",
-            content: "width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no",
-          },
+          }
         ]}
       />
       
@@ -60,9 +56,9 @@ export default function Home() {
           </p>
           <Destination />
           <div className="flex justify-center mt-10">
-            <button className="border-red-500 border py-3 px-20 w-full sm:w-auto text-red-500 font-semibold mt-10 rounded-full hover:bg-red-600 hover:text-white">
+            {/* <button className="border-red-500 border py-3 px-20 w-full sm:w-auto text-red-500 font-semibold mt-10 rounded-full hover:bg-red-600 hover:text-white">
               More Destination
-            </button>
+            </button> */}
           </div>
         </div>
         <div className="px-5 md:px-20 py-10">

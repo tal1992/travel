@@ -52,7 +52,7 @@ export const MainHero = () => {
     };
 
   return (
-    <div className="lg:py-20 lg:pb-10" style={{ backgroundColor: "#FFF7F5" }}>
+    <div className="lg:py-20 lg:pb-10" style={{ backgroundColor: "#FFF7F5", minHeight: "255px"  }}>
       <div className="flex justify-between items-start px-0 lg:px-20">
         <div className="w-full hidden lg:block lg:w-2/5">
           <h1 className="text-4xl font-bold">London is Calling !</h1>

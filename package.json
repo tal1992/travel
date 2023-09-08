@@ -8,12 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mdx-js/react": "^2.3.0",
     "@netlify/plugin-nextjs": "^4.39.4",
     "autoprefixer": "^10.4.14",
+    "mdx-loader": "^3.0.2",
     "next": "13.4.13",
     "next-mdx-remote": "^4.4.1",
     "next-react-svg": "^1.1.2",
     "next-seo": "^6.1.0",
+    "next-sitemap": "^4.2.3",
     "react": "18.2.0",
     "react-autosuggest": "^10.1.0",
     "react-dom": "18.2.0",
@@ -24,6 +27,7 @@
   "devDependencies": {
     "@types/node": "^20.4.10",
     "@types/react": "^18.2.20",
+    "babel-loader": "^9.1.3",
     "postcss": "^8.1.0",
     "postcss-import": "^13.0.0",
     "postcss-preset-env": "^6.7.0",

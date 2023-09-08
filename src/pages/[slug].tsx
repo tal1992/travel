@@ -20,6 +20,7 @@ import { locations } from "../data/locations";
 import Link from "next/link";
 import LazyLoadImage from "../components/LazyLoadImage";
 import { NextSeo } from "next-seo";
+
 export default function PostPage({
   source,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
@@ -57,31 +58,31 @@ export default function PostPage({
               <title>{source.frontmatter.title as string}</title>
             </Head>
             <NextSeo
-                title={source.frontmatter.title as string}
-                description={source.frontmatter.description as string}
-                openGraph={{
-                  title: source.frontmatter.title as string,
-                  description:source.frontmatter.description as string,
-                  images: [
-                    {
-                      url: source.frontmatter.previewImage as string,
-                      width: 1200,
-                      height: 630, 
-                      alt: source.frontmatter.title as string,
-                    },
-                  ],              
-                }}
-                additionalMetaTags={[
+              title={source.frontmatter.title as string}
+              description={source.frontmatter.description as string}
+              openGraph={{
+                title: source.frontmatter.title as string,
+                description: source.frontmatter.description as string,
+                images: [
                   {
-                    property: "dc:creator",
-                    content: "Exploring England",
+                    url: source.frontmatter.previewImage as string,
+                    width: 1200,
+                    height: 630,
+                    alt: source.frontmatter.title as string,
                   },
-                  {
-                    name: "application-name",
-                    content: "Exploring England",
-                  }
-                ]}
-              />
+                ],
+              }}
+              additionalMetaTags={[
+                {
+                  property: "dc:creator",
+                  content: "Exploring England",
+                },
+                {
+                  name: "application-name",
+                  content: "Exploring England",
+                },
+              ]}
+            />
             <MDXRemote
               {...source}
               // specifying the custom MDX components
@@ -151,9 +152,30 @@ export default function PostPage({
     </MainLayout>
   );
 }
+
 export async function getStaticPaths() {
-  return { paths: [], fallback: "blocking" };
+  const paths = [];
+  const blogPostPaths = await fs.readdirSync("./src/_posts");
+
+  for (const blogPostPath of blogPostPaths) {
+    console.log('the path ==', blogPostPath);
+    if (blogPostPath.endsWith(".mdx") && blogPostPath !== "sitemap.mdx") {
+      const slug = blogPostPath.replace(".mdx", "");
+      paths.push({
+        params: {
+          slug,
+        },
+      });
+    }
+  }
+
+  return {
+    paths,
+    fallback: "blocking",
+  };
 }
+
+
 
 export async function getStaticProps(
   ctx: GetStaticPropsContext<{
@@ -162,22 +184,19 @@ export async function getStaticProps(
 ) {
   const { slug } = ctx.params!;
 
-  // retrieve the MDX blog post file associated
-  // with the specified slug parameter
+  // Continue with your existing code to retrieve the MDX content for valid slugs
   const postFile = fs.readFileSync(
     path.resolve(`./src/_posts/${slug}.mdx`),
     "utf-8"
   );
 
-  // read the MDX serialized content along with the frontmatter
-  // from the .mdx blog post file
   const mdxSource = await serialize(postFile, { parseFrontmatter: true });
 
   return {
     props: {
       source: mdxSource,
     },
-    // enable ISR
     revalidate: 60,
   };
 }
+

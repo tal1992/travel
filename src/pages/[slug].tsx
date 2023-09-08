@@ -65,7 +65,7 @@ export default function PostPage({
                 description: source.frontmatter.description as string,
                 images: [
                   {
-                    url: source.frontmatter.previewImage as string,
+                    url: `/${source.frontmatter.previewImage as string}`,
                     width: 1200,
                     height: 630,
                     alt: source.frontmatter.title as string,

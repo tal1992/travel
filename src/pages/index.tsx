@@ -8,24 +8,32 @@ import { Footer } from "../components/Footer";
 
 const DEFAULT_SEO = {
   title: "Exploring England",
-  description:"Discover the best tourist attractions of the UK",
+  description: "Discover the best tourist attractions of the UK",
   openGraph: {
     type: "website",
     locale: "en_IE",
     url: "https://exploringengland.uk",
-    title: "",
+    title: "Exploring England",
     description: "Discover the best tourist attractions of the UK",
-    image:
-      "https://prismic-io.s3.amazonaws.com/gary-blog%2F3297f290-a885-4cc6-9b19-3235e3026646_default.jpg",
+    image: "https://exploringengland.uk/assets/bigbenheader.webp",
     site_name: "https://exploringengland.uk",
     imageWidth: 1200,
-    imageHeight: 1200,
+    imageHeight: 630,
+    images: [
+      {
+        url: "https://exploringengland.uk/assets/bigbenheader.webp",
+        width: 1200,
+        height: 630,
+        alt: "Big Ben Street",
+      },
+    ],
   },
   twitter: {
     handle: "@iamtalvinder",
     cardType: "summary_large_image",
   },
 };
+
 
 export default function Home() {
   return (
@@ -34,7 +42,6 @@ export default function Home() {
         title="Exploring England"
         description="Discover the best of England from the bustling streets of London to the rolling hills of the Cotswolds. Find inspiration for your next adventure, book your accommodation, and get the latest travel news and updates."
         openGraph={DEFAULT_SEO}
-        
         additionalMetaTags={[
           {
             property: "dc:creator",

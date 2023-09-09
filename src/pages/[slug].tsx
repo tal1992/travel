@@ -158,7 +158,6 @@ export async function getStaticPaths() {
   const blogPostPaths = await fs.readdirSync("./src/_posts");
 
   for (const blogPostPath of blogPostPaths) {
-    console.log('the path ==', blogPostPath);
     if (blogPostPath.endsWith(".mdx") && blogPostPath !== "sitemap.mdx") {
       const slug = blogPostPath.replace(".mdx", "");
       paths.push({

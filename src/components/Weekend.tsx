@@ -3,11 +3,11 @@ import Link from "next/link";
 import LazyLoadImage from "./LazyLoadImage";
 import {locations} from '../data/locations';
 import Image from "next/image"; // Import the Image component from next/image
-export const Destination = () => {
+export const Weekend = () => {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-20">
-      {locations.filter(elem => elem.landingTag === 'top-destinations').map((item, key) => (
+      {locations.filter(elem => elem.landingTag === 'weekend').map((item, key) => (
         <div className="" key={key}>
           <Link href={item.link} title={item.name}>
           <LazyLoadImage src={item.image_url} alt={item.name} className="object-cover rounded-md hover:opacity-75 card-images"/>

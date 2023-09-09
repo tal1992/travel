@@ -1,5 +1,6 @@
 import React from "react";
 import LazyLoadImage from "../LazyLoadImage";
+import Link from "next/link";
 
 export const ArticleHero = ({ src, alt }: { src: string; alt: string }) => {
   return (
@@ -39,6 +40,9 @@ export const ArticleHero = ({ src, alt }: { src: string; alt: string }) => {
             style={{ borderRadius: "0px 0px 0px 7rem" }}
           />
         </div> */}
+
+
+ 
 
         <div className="lg:block">
           <LazyLoadImage

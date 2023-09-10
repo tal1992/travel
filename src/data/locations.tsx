@@ -66,7 +66,7 @@ export const locations = [
   {
     name: "Windsor",
     image_url: "assets/blog/windsor.jpg",
-    rate: "4.7",
+    rate: "4.8",
     link: "/windsor",
     landingTag: "weekend",
     category: "Historic Town",
@@ -74,7 +74,7 @@ export const locations = [
   {
     name: "Bletchley Park",
     image_url: "assets/blog/bletchley-park.jpg",
-    rate: "4.7",
+    rate: "4.5",
     link: "/bletchley-park",
     landingTag: "weekend",
     category: "Museum",
@@ -82,7 +82,7 @@ export const locations = [
   {
     name: "Chatsworth House",
     image_url: "assets/blog/chatsworthhouse.webp",
-    rate: "4.7",
+    rate: "4.6",
     link: "/chatsworth-house",
     landingTag: "weekend",
     category: "Stately Home",
@@ -106,7 +106,7 @@ export const locations = [
   {
     name: "Cambridge",
     image_url: "assets/blog/cambridge.webp",
-    rate: "4.7",
+    rate: "4.8",
     link: "/cambridge",
     landingTag: "weekend",
     category: "Historic Town",
@@ -122,7 +122,7 @@ export const locations = [
   {
     name: "Stonhenge",
     image_url: "assets/blog/stonehenge.webp",
-    rate: "4.7",
+    rate: "4.5",
     link: "/stonehenge",
     landingTag: "weekend",
     category: "Historical Landmark",

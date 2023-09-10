@@ -6,6 +6,8 @@ import { Weekend } from "../components/Weekend";
 import { PeopleReview } from "../components/Review";
 import { Banner } from "../components/Banner";
 import { Footer } from "../components/Footer";
+import { useRouter } from 'next/router';
+import Link from "next/link";
 
 const DEFAULT_SEO = {
   title: "Exploring England",
@@ -36,6 +38,20 @@ const DEFAULT_SEO = {
 };
 
 export default function Home() {
+  const router = useRouter();
+
+  // Define an array of links with different landing tags
+  const links = [
+    { label: 'Top Destinations', landingTag: 'top-destinations' },
+    { label: 'Weekend Getaways', landingTag: 'weekend' },
+    // Add more links as needed
+  ];
+
+  const handleListingClick = (landingTag: string) => {
+    // Navigate to the listing page with the selected landing tag in the URL
+    router.push(`/listing/${landingTag}`);
+  };
+
   return (
     <>
       <NextSeo
@@ -67,9 +83,9 @@ export default function Home() {
           </p>
           <Destination />
           <div className="flex justify-center mt-10">
-            {/* <button className="border-red-500 border py-3 px-20 w-full sm:w-auto text-red-500 font-semibold mt-10 rounded-full hover:bg-red-600 hover:text-white">
-              More Destination
-            </button> */}
+            <Link href="/listing?search=top-destinations" className="border-red-500 border py-3 px-20 w-full sm:w-auto text-red-500 font-semibold mt-10 rounded-full hover:bg-red-600 hover:text-white">
+              More Top Destination
+            </Link>
           </div>
         </div>
 
@@ -83,6 +99,11 @@ export default function Home() {
             away:
           </p>
           <Weekend />
+          <div className="flex justify-center mt-10">
+            <Link href="/listing?search=weekend" className="border-red-500 border py-3 px-20 w-full sm:w-auto text-red-500 font-semibold mt-10 rounded-full hover:bg-red-600 hover:text-white">
+              More Weekend Destination
+            </Link>
+          </div>
         </div>
 
         <div className="px-5 md:px-20 py-10">

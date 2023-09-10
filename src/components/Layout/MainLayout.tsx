@@ -119,6 +119,7 @@ const Navbar = () => {
               <SearchModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
             </>
           )}
+          {!showSearch && <Link href="/listing" className="text-red-600 underline">Destinations</Link>}
           <Link href="" title="register" className="px-5 py-2 text-white rounded-full bg-red-600 mx-4 text-sm hidden">
             Register
           </Link>

@@ -101,7 +101,7 @@ export default function Home() {
           <Weekend />
           <div className="flex justify-center mt-10">
             <Link href="/listing?search=weekend" className="border-red-500 border py-3 px-20 w-full sm:w-auto text-red-500 font-semibold mt-10 rounded-full hover:bg-red-600 hover:text-white">
-              More Weekend Destination
+              Weekend Destinations
             </Link>
           </div>
         </div>

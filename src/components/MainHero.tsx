@@ -76,16 +76,16 @@ export const MainHero = () => {
 
             <div className="flex my-4">
               <label htmlFor="" className="mr-5 text-gray-600">
-                #beach
+                #bigben
               </label>
               <label htmlFor="" className="mr-5 text-gray-600">
-                #mountain
+                #towerbridge
               </label>
               <label htmlFor="" className="mr-5 text-gray-600">
-                #climb
+                #skygarden
               </label>
               <label htmlFor="" className="mr-5 text-gray-600">
-                #dive
+                #oxford
               </label>
             </div>
           </div>

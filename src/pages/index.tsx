@@ -12,6 +12,14 @@ import Link from "next/link";
 const DEFAULT_SEO = {
   title: "Exploring England",
   description: "Discover the best tourist attractions of the UK",
+  images: [
+    {
+      url: "https://exploringengland.uk/assets/bigbenheader.webp",
+      width: 1200,
+      height: 630,
+      alt: "Big Ben Street",
+    },
+  ],
   openGraph: {
     type: "website",
     locale: "en_IE",
@@ -20,16 +28,6 @@ const DEFAULT_SEO = {
     description: "Discover the best tourist attractions of the UK",
     image: "https://exploringengland.uk/assets/bigbenheader.webp",
     site_name: "https://exploringengland.uk",
-    imageWidth: 1200,
-    imageHeight: 630,
-    images: [
-      {
-        url: "https://exploringengland.uk/assets/bigbenheader.webp",
-        width: 1200,
-        height: 630,
-        alt: "Big Ben Street",
-      },
-    ],
   },
   twitter: {
     handle: "@iamtalvinder",

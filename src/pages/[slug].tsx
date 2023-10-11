@@ -4,7 +4,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import Head from "next/head";
 import H1 from "../components/mdx/H1";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy } from "react";
 import Paragraph from "../components/mdx/Paragraph";
 import H2 from "../components/mdx/H2";
 import H3 from "../components/mdx/H3";
@@ -20,10 +20,22 @@ import { locations } from "../data/locations";
 import Link from "next/link";
 import LazyLoadImage from "../components/LazyLoadImage";
 import { NextSeo } from "next-seo";
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  EmailShareButton,
+  EmailIcon,
+} from "next-share";
 
 export default function PostPage({
   source,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  const currentUrl = typeof window !== "undefined" ? window.location.href : "";
+
   const [randomLocations, setRandomLocations] = useState([]);
   const locationsArray = locations; // Your array of locations
 
@@ -57,6 +69,7 @@ export default function PostPage({
             <Head>
               <title>{source.frontmatter.title as string}</title>
             </Head>
+
             <NextSeo
               title={source.frontmatter.title as string}
               description={source.frontmatter.description as string}
@@ -65,7 +78,9 @@ export default function PostPage({
                 description: source.frontmatter.description as string,
                 images: [
                   {
-                    url: `https://exploringengland.uk//${source.frontmatter.previewImage as string}`,
+                    url: `https://exploringengland.uk//${
+                      source.frontmatter.previewImage as string
+                    }`,
                     width: 1200,
                     height: 630,
                     alt: source.frontmatter.title as string,
@@ -98,6 +113,38 @@ export default function PostPage({
                 strong: Strong,
               }}
             />
+
+<p className="pt-10">Share this on social media </p>
+
+            <div className="py-5 flex  items-left justify-left space-x-4">
+              <FacebookShareButton
+                url={currentUrl}
+                quote={source.frontmatter.title as string}
+                hashtag={source.frontmatter.title as string}
+              >
+                <FacebookIcon size={32} round />
+              </FacebookShareButton>
+
+              <LinkedinShareButton url={currentUrl}>
+                <LinkedinIcon size={32} round />
+              </LinkedinShareButton>
+
+              <WhatsappShareButton
+                url={currentUrl}
+                title={source.frontmatter.title as string}
+                separator=":: "
+              >
+                <WhatsappIcon size={32} round />
+              </WhatsappShareButton>
+
+              <EmailShareButton
+                url={currentUrl}
+                subject={source.frontmatter.title as string}
+                body={source.frontmatter.description as string}
+              >
+                <EmailIcon size={32} round />
+              </EmailShareButton>
+            </div>
           </div>
         </div>
         <div className="px-5 md-px-20 pb-10 lg:w-1/5 lg:py-20 lg:pl-0 h-screen sticky top-0 lg:mb-20">
@@ -174,8 +221,6 @@ export async function getStaticPaths() {
   };
 }
 
-
-
 export async function getStaticProps(
   ctx: GetStaticPropsContext<{
     slug: string;
@@ -198,4 +243,3 @@ export async function getStaticProps(
     revalidate: 60,
   };
 }
-

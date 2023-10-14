@@ -10,7 +10,7 @@ export const Weekend = () => {
       {locations.filter(elem => elem.landingTag === 'weekend').map((item, key) => (
         <div className="" key={key}>
           <Link href={item.link} title={item.name}>
-          <LazyLoadImage src={item.image_url} alt={item.name} className="object-cover rounded-md hover:opacity-75 card-images"/>
+          <LazyLoadImage src={item.image_url_mobile} alt={item.name} className="object-cover rounded-md hover:opacity-75 card-images"/>
 
             <div className="py-3">
               <div className="flex items-center">
@@ -35,7 +35,7 @@ export const Weekend = () => {
               </div>
               <div className="">
                 <h4 className="font-semibold mt-1">{item.name}</h4>
-                <label htmlFor="" className="text-gray-500">
+                <label htmlFor="" className="text-gray-700">
                   {item.category}
                 </label>
               </div>

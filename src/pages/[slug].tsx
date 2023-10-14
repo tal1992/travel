@@ -157,7 +157,7 @@ export default function PostPage({
               <div className="" key={key}>
                 <Link href={item.link} className="flex pb-5">
                   <LazyLoadImage
-                    src={item.image_url}
+                    src={item.image_url_mobile}
                     alt={item.name}
                     className="object-cover rounded-md hover:opacity-75 w-2/5 lg:w-2/5 xs:h-20 lg:h-16"
                   />

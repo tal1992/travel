@@ -6,8 +6,9 @@ import { Weekend } from "../components/Weekend";
 import { PeopleReview } from "../components/Review";
 import { Banner } from "../components/Banner";
 import { Footer } from "../components/Footer";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import Link from "next/link";
+import Head from "next/head";
 
 const DEFAULT_SEO = {
   title: "Exploring England",
@@ -40,8 +41,8 @@ export default function Home() {
 
   // Define an array of links with different landing tags
   const links = [
-    { label: 'Top Destinations', landingTag: 'top-destinations' },
-    { label: 'Weekend Getaways', landingTag: 'weekend' },
+    { label: "Top Destinations", landingTag: "top-destinations" },
+    { label: "Weekend Getaways", landingTag: "weekend" },
     // Add more links as needed
   ];
 
@@ -52,6 +53,9 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <link rel="preload" as="image" href="_next/image?url=%2Fassets%2Fbigbenheader_mobile.webp&w=1920&q=75" />
+      </Head>
       <NextSeo
         title="Exploring England"
         description="Discover the best of England from the bustling streets of London to the rolling hills of the Cotswolds. Find inspiration for your next adventure, book your accommodation, and get the latest travel news and updates."
@@ -81,13 +85,19 @@ export default function Home() {
           </p>
           <Destination />
           <div className="flex justify-center mt-10">
-            <Link href="/listing?search=top-destinations" className="border-red-500 border py-3 px-20 w-full sm:w-auto text-red-500 font-semibold mt-10 rounded-full hover:bg-red-600 hover:text-white">
+            <Link
+              href="/listing?search=top-destinations"
+              className="border-red-500 border py-3 px-20 w-full sm:w-auto text-red-500 font-semibold mt-10 rounded-full hover:bg-red-600 hover:text-white"
+            >
               More Top Destination
             </Link>
           </div>
         </div>
 
-        <div className="px-5 md:px-20 py-10"  style={{ backgroundColor: "#FFF7F5" }}>
+        <div
+          className="px-5 md:px-20 py-10"
+          style={{ backgroundColor: "#FFF7F5" }}
+        >
           <h4 className="text-3xl font-semibold">
             Plan Your Weekend Escape from London
           </h4>
@@ -98,7 +108,10 @@ export default function Home() {
           </p>
           <Weekend />
           <div className="flex justify-center mt-10">
-            <Link href="/listing?search=weekend" className="border-red-500 border py-3 px-20 w-full sm:w-auto text-red-500 font-semibold mt-10 rounded-full hover:bg-red-600 hover:text-white">
+            <Link
+              href="/listing?search=weekend"
+              className="border-red-500 border py-3 px-20 w-full sm:w-auto text-red-500 font-semibold mt-10 rounded-full hover:bg-red-600 hover:text-white"
+            >
               Weekend Destinations
             </Link>
           </div>

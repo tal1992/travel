@@ -2,6 +2,7 @@ export const locations = [
   {
     name: "Buckingham Palace",
     image_url: "assets/blog/buchingham.webp",
+    image_url_mobile: "assets/blog/buchingham_mobile.webp",
     rate: "4.6",
     link: "/buckingham-palace",
     landingTag: "top-destinations",
@@ -10,6 +11,7 @@ export const locations = [
   {
     name: "Big Ben",
     image_url: "assets/bigbenheader.webp",
+    image_url_mobile: "assets/bigbenheader_mobile.webp",
     rate: "4.8",
     link: "/big-ben",
     landingTag: "top-destinations",
@@ -18,6 +20,7 @@ export const locations = [
   {
     name: "Cotswolds",
     image_url: "assets/blog/cotswolds.webp",
+    image_url_mobile: "assets/blog/cotswolds_mobile.webp",
     rate: "4.7",
     link: "/cotswolds",
     landingTag: "top-destinations",
@@ -26,6 +29,7 @@ export const locations = [
   {
     name: "Hampstead Heath",
     image_url: "assets/blog/hampstead.webp",
+    image_url_mobile: "assets/blog/hampstead_mobile.webp",
     rate: "4.7",
     link: "/hampstead",
     landingTag: "top-destinations",
@@ -34,14 +38,16 @@ export const locations = [
   {
     name: "Canary Wharf",
     image_url: "assets/blog/canary.webp",
+    image_url_mobile: "assets/blog/canary_mobile.webp",
     rate: "4.6",
     link: "/canary-wharf",
     landingTag: "top-destinations",
-    category: "Commercial Hub, Skyscrapper",
+    category: "Commercial Hub, Skyscraper",
   },
   {
     name: "Tower Bridge",
     image_url: "assets/blog/tower-bridge.jpg",
+    image_url_mobile: "assets/blog/tower-bridge_mobile.jpg",
     rate: "4.8",
     link: "/tower-bridge",
     landingTag: "top-destinations",
@@ -50,6 +56,7 @@ export const locations = [
   {
     name: "British Museum",
     image_url: "assets/blog/british-museum.webp",
+    image_url_mobile: "assets/blog/british-museum_mobile.webp",
     rate: "4.8",
     link: "/british-museum",
     landingTag: "top-destinations",
@@ -58,14 +65,16 @@ export const locations = [
   {
     name: "Sky Garden",
     image_url: "assets/blog/sky-gardens.webp",
+    image_url_mobile: "assets/blog/sky-gardens_mobile.webp",
     rate: "4.6",
     link: "/sky-garden",
     landingTag: "top-destinations",
-    category: "Skyscrapper",
+    category: "Skyscraper",
   },
   {
     name: "Windsor",
     image_url: "assets/blog/windsor.jpg",
+    image_url_mobile: "assets/blog/windsor_mobile.jpg",
     rate: "4.8",
     link: "/windsor",
     landingTag: "weekend",
@@ -74,6 +83,7 @@ export const locations = [
   {
     name: "Bletchley Park",
     image_url: "assets/blog/bletchley-park.jpg",
+    image_url_mobile: "assets/blog/bletchley-park_mobile.webp",
     rate: "4.5",
     link: "/bletchley-park",
     landingTag: "weekend",
@@ -82,6 +92,7 @@ export const locations = [
   {
     name: "Chatsworth House",
     image_url: "assets/blog/chatsworthhouse.webp",
+    image_url_mobile: "assets/blog/chatsworthhouse_mobile.webp",
     rate: "4.6",
     link: "/chatsworth-house",
     landingTag: "weekend",
@@ -90,6 +101,7 @@ export const locations = [
   {
     name: "York",
     image_url: "assets/blog/york.webp",
+    image_url_mobile: "assets/blog/york_mobile.jpg",
     rate: "4.7",
     link: "/york",
     landingTag: "weekend",
@@ -98,6 +110,7 @@ export const locations = [
   {
     name: "Oxford",
     image_url: "assets/blog/oxford.webp",
+    image_url_mobile: "assets/blog/oxford_mobile.webp",
     rate: "4.7",
     link: "/oxford",
     landingTag: "weekend",
@@ -106,6 +119,7 @@ export const locations = [
   {
     name: "Cambridge",
     image_url: "assets/blog/cambridge.webp",
+    image_url_mobile: "assets/blog/cambridge_mobile.webp",
     rate: "4.8",
     link: "/cambridge",
     landingTag: "weekend",
@@ -114,6 +128,7 @@ export const locations = [
   {
     name: "The Cotswolds",
     image_url: "assets/blog/cotswolds.webp",
+    image_url_mobile: "assets/blog/cotswolds_mobile.webp",
     rate: "4.7",
     link: "/cotswolds",
     landingTag: "weekend",
@@ -122,6 +137,7 @@ export const locations = [
   {
     name: "Stonhenge",
     image_url: "assets/blog/stonehenge.webp",
+    image_url_mobile: "assets/blog/stonehenge_mobile.webp",
     rate: "4.5",
     link: "/stonehenge",
     landingTag: "weekend",

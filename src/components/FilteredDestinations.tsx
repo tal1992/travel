@@ -4,6 +4,7 @@ import Link from "next/link";
 interface Location {
   name: string;
   image_url: string;
+  image_url_mobile: string;
   rate: string;
   link: string;
   landingTag: string;
@@ -21,7 +22,7 @@ const FilteredDestinations: React.FC<Props> = ({ locations }) => {
         <div key={index} className="bg-white rounded-lg shadow-md">
           <Link href={location.link}>
             <img
-              src={location.image_url}
+              src={location.image_url_mobile}
               alt={location.name}
               className="object-cover rounded-t-lg w-full h-40"
             />

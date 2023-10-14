@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "./HeroCarousel.module.css";
 import "react-multi-carousel/lib/styles.css";
-import Image from "next/image"; // Import the Image component from next/image
+import Image from "next/image"; 
 import { useEffect, useState } from "react";
 export const HeroCarousel = () => {
   const dataReview = [

@@ -20,6 +20,8 @@ import { locations } from "../data/locations";
 import Link from "next/link";
 import LazyLoadImage from "../components/LazyLoadImage";
 import { NextSeo } from "next-seo";
+import Image from "next/image";
+
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -37,7 +39,7 @@ export default function PostPage({
   const currentUrl = typeof window !== "undefined" ? window.location.href : "";
 
   const [randomLocations, setRandomLocations] = useState([]);
-  const locationsArray = locations; // Your array of locations
+  const locationsArray = locations;
 
   useEffect(() => {
     if (locationsArray.length > 0) {
@@ -114,7 +116,7 @@ export default function PostPage({
               }}
             />
 
-<p className="pt-10">Share this on social media </p>
+            <p className="pt-10">Share this on social media </p>
 
             <div className="py-5 flex  items-left justify-left space-x-4">
               <FacebookShareButton
@@ -156,10 +158,13 @@ export default function PostPage({
             {randomLocations.map((item, key) => (
               <div className="" key={key}>
                 <Link href={item.link} className="flex pb-5">
-                  <LazyLoadImage
-                    src={item.image_url_mobile}
+                  <Image
+                    src={`/${item.image_url_mobile}`}
                     alt={item.name}
                     className="object-cover rounded-md hover:opacity-75 w-2/5 lg:w-2/5 xs:h-20 lg:h-16"
+                    width={150}
+                    height={110}
+                    loading={"lazy"}
                   />
 
                   <div className="w-3/5 lg:w-3/5 ml-3">

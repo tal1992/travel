@@ -24,14 +24,14 @@ export const ArticleHero = ({ src, alt }: { src: string; alt: string }) => {
   });
   return (
     <div className="pb-5">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center mobile-width-full">
 
         <div className="lg:block">
           <Image
             src={width < 420 ? imagepath: imagepath}
             alt={alt}
             className="block w-full right-0 object-cover"
-            layout="responsive"
+            layout={width > 420 ? "responsive": 'raw'}
             width={width > 420 ? 1800: 440}
             height={width > 420 ? 1200: 300}
             loading={"eager"}

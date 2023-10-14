@@ -45,3 +45,10 @@
   top: 0;
   bottom: 0;
 }
+
+@media (max-width: 420px) {
+.mobile-width-full {
+  width: 100%;
+  display: block;
+}
+}

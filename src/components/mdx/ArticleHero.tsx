@@ -3,7 +3,7 @@ import LazyLoadImage from "../LazyLoadImage";
 import Link from "next/link";
 import Image from "next/image";
 
-export const ArticleHero = ({ src, alt }: { src: string; alt: string }) => {
+export const ArticleHero = ({ src, alt, load="eager" }: { src: string; alt: string, load?: "eager" | "lazy" }) => {
   const [width, setWidth] = useState<number>(0);
   const srcpath = `/${src}`;
   const [imagepath, setImagePath] = useState<string>(srcpath);
@@ -34,7 +34,7 @@ export const ArticleHero = ({ src, alt }: { src: string; alt: string }) => {
             layout={width > 420 ? "responsive": 'raw'}
             width={width > 420 ? 1800: 440}
             height={width > 420 ? 1200: 300}
-            loading={"eager"}
+            loading={load}
           />
         </div>
       </div>

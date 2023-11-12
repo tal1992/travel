@@ -2,6 +2,7 @@ import { NextSeo } from "next-seo";
 import { MainLayout } from "../components/Layout/MainLayout";
 import { MainHero } from "../components/MainHero";
 import { Destination } from "../components/Destination";
+import { Featured } from "../components/Featured";
 import { Weekend } from "../components/Weekend";
 import { PeopleReview } from "../components/Review";
 import { Banner } from "../components/Banner";
@@ -117,7 +118,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="px-5 md:px-20 py-10">
+        {/* <div className="px-5 md:px-20 py-10">
           <div className="container mx-auto text-center w-full lg:w-2/5">
             <h4 className="text-3xl font-semibold">What travellers says</h4>
             <p className="mt-8 leading-relaxed font-semibold text-gray-700 ">
@@ -129,7 +130,28 @@ export default function Home() {
             </p>
           </div>
           <PeopleReview />
+        </div> */}
+
+{ /* Featured Posts */}
+
+<div className="px-5 md:px-20 py-10">
+          <h4 className="text-3xl font-semibold">
+            Featured articles
+          </h4>
+          <p className="mt-8 w-full leading-relaxed font-semibold text-gray-700">
+          Travelers consistently praise the United Kingdom for its rich history, diverse culture, and iconic attractions. The blend of modernity and tradition, from historic landmarks to vibrant cities, creates a captivating ambiance that leaves a lasting impression.
+          </p>
+          <Featured />
+          <div className="flex justify-center mt-10">
+            {/* <Link
+              href="/listing?search=top-destinations"
+              className="border-red-500 border py-3 px-20 w-full sm:w-auto text-red-500 font-semibold mt-10 rounded-full hover:bg-red-600 hover:text-white"
+            >
+              More Top Destination
+            </Link> */}
+          </div>
         </div>
+        
         {/* <div className="py-20">
           <div className="flex flex-col lg:flex-row justify-between">
             <div className="w-full lg:w-5/12 px-5 lg:px-20 ">

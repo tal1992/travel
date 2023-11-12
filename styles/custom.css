@@ -3,6 +3,9 @@
       height: 165px;
       width: 100%;
     }
+    .bg-opacity-50 {
+      border-radius: 0 0 10px 10px;
+    }
   }
   
 

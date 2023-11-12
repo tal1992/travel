@@ -1,0 +1,38 @@
+export const featured = [
+    {
+      name: "London Culture & Diversity",
+      image_url: "assets/blog/diversity.webp",
+      image_url_mobile: "assets/blog/diversity_mobile.webp",
+      rate: "4.6",
+      link: "/london-diversity",
+      landingTag: "featured-destinations",
+      category: "Culture",
+    },
+    {
+        name: "Autumn- A Season of Splendor",
+        image_url: "assets/blog/autumn.webp",
+        image_url_mobile: "assets/blog/autumn_mobile.webp",
+        rate: "4.6",
+        link: "/london-autumn",
+        landingTag: "featured-destinations",
+        category: "Nature",
+      },
+      {
+        name: "Best Beaches in UK",
+        image_url: "assets/blog/beach.webp",
+        image_url_mobile: "assets/blog/beach_mobile.webp",
+        rate: "4.6",
+        link: "/top-10-beaches",
+        landingTag: "featured-destinations",
+        category: "Beach",
+      },
+      {
+        name: "Biodiversity in London",
+        image_url: "assets/blog/biodiversity.webp",
+        image_url_mobile: "assets/blog/biodiversity_mobile.webp",
+        rate: "4.6",
+        link: "/london-biodiversity",
+        landingTag: "featured-destinations",
+        category: "Wildlife",
+      },
+];

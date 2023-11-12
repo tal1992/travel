@@ -1,9 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { locations } from '../../data/locations'; // Adjust the import path as needed
+import { locations } from '../../data/locations';
+import { featured } from '../../data/featured';
 
 const generateSitemapXML = () => {
-  const urls = locations.map((location) => ({
-    loc: `https://exploringengland.uk${location.link}`,
+  const allData = [...locations, ...featured];
+
+  const urls = allData.map((item) => ({
+    loc: `https://exploringengland.uk${item.link}`,
     lastmod: new Date().toISOString(),
   }));
 
